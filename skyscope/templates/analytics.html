@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}SQL Analytics{% endblock %}
+{% block page_title %}SQL Analytics{% endblock %}
+
+{% block content %}
+<p class="text-muted mb-4">Run pre-built business intelligence queries against the flight operations database.</p>
+
+<div class="row g-3 mb-4">
+  {% for query_id, query in queries.items() %}
+  <div class="col-md-6 col-lg-4">
+    <div class="query-card">
+      <div class="query-card-icon">
+        <i class="fas fa-{{ ['chart-bar', 'map-marker-alt', 'calendar-alt', 'route', 'chart-pie', 'building'][loop.index0 % 6] }}"></i>
+      </div>
+      <h6>{{ query.title }}</h6>
+      <p>{{ query.description }}</p>
+      <button class="btn btn-sky btn-run" data-query-id="{{ query_id }}" data-query-title="{{ query.title }}">
+        <i class="fas fa-play me-1"></i>Run Query
+      </button>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="card-panel results-panel" id="resultsPanel">
+  <div class="card-panel-header">
+    <h5 id="resultsTitle"><i class="fas fa-table me-2 text-primary"></i>Query Results</h5>
+    <button class="btn btn-sm btn-outline-secondary" id="closeResults">
+      <i class="fas fa-times me-1"></i>Close
+    </button>
+  </div>
+  <div class="card-panel-body p-0">
+    <div id="resultsLoading" class="results-loading d-none">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p class="mt-2 mb-0">Executing query...</p>
+    </div>
+    <div class="table-responsive" id="resultsTableWrap">
+      <table class="table table-modern mb-0" id="resultsTable">
+        <thead id="resultsHead"></thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/analytics.js') }}"></script>
+{% endblock %}

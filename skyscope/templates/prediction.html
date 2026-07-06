@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}Delay Prediction{% endblock %}
+{% block page_title %}Delay Prediction{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="card-panel">
+      <div class="card-panel-header">
+        <h5><i class="fas fa-brain me-2 text-primary"></i>Flight Delay Prediction</h5>
+        <div class="d-flex gap-2 flex-wrap">
+          <span class="badge bg-primary">CatBoost Classifier</span>
+          <span class="badge bg-secondary">Random Forest Regression</span>
+        </div>
+      </div>
+      <div class="card-panel-body">
+        <p class="text-muted small mb-4">
+          Predict whether a US domestic flight will be delayed and estimate delay duration in minutes.
+        </p>
+        {% if not model_ready %}
+        <div class="alert alert-warning small">ML model files are missing or could not be loaded from the <code>models/</code> folder.</div>
+        {% endif %}
+        <form id="predictionForm" class="prediction-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Airline</label>
+              <select class="form-select" id="predAirline" required>
+                <option value="">Select airline</option>
+                {% for airline in airlines %}
+                <option value="{{ airline }}">{{ airline }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Origin Airport</label>
+              <select class="form-select" id="predOrigin" required>
+                <option value="">Select</option>
+                {% for airport in airports %}
+                <option value="{{ airport }}">{{ airport }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Destination Airport</label>
+              <select class="form-select" id="predDestination" required>
+                <option value="">Select</option>
+                {% for airport in airports %}
+                <option value="{{ airport }}">{{ airport }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Scheduled Departure</label>
+              <input type="time" class="form-control" id="predDepTime" value="09:00" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Scheduled Arrival</label>
+              <input type="time" class="form-control" id="predArrTime" value="11:00" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Distance (miles)</label>
+              <input type="number" class="form-control" id="predDistance" min="0" max="6000" value="500" step="10" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Flight Date</label>
+              <input type="date" class="form-control" id="predDate" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Day of Week</label>
+              <select class="form-select" id="predDayOfWeek" required>
+                {% for day in days_of_week %}
+                <option value="{{ loop.index }}">{{ day }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Month</label>
+              <select class="form-select" id="predMonth" required>
+                {% set months = ['January','February','March','April','May','June','July','August','September','October','November','December'] %}
+                {% for m in range(1, 13) %}
+                <option value="{{ m }}">{{ months[m-1] }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-sky mt-4" id="predictBtn" {% if not model_ready %}disabled{% endif %}>
+            <i class="fas fa-magic me-2"></i>Predict Delay
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="prediction-result" id="predictionResult">
+      <div class="prediction-result-icon delayed" id="resultIcon">
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <div class="prediction-label">Prediction</div>
+      <div class="prediction-value" id="resultPrediction">Delayed</div>
+      <div class="probability-ring" id="probRing">
+        <span class="prob-value" id="resultProbability">0%</span>
+        <span class="prob-label">Delay Probability</span>
+      </div>
+      <div class="estimated-delay-box mt-4" id="estimatedDelayBox">
+        <div class="prediction-label">Estimated Delay</div>
+        <div class="estimated-delay-value" id="resultEstimatedDelay">0 min</div>
+        <small class="text-muted d-block mt-1">Random Forest regression</small>
+      </div>
+    </div>
+
+    <div class="card-panel mt-3" id="predictionPlaceholder">
+      <div class="card-panel-body text-center py-5">
+        <i class="fas fa-robot fa-3x text-muted mb-3 opacity-50"></i>
+        <h6 class="text-muted">Awaiting Prediction</h6>
+        <p class="text-muted small mb-0">Fill in the form and click Predict to see ML results.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/prediction.js') }}"></script>
+{% endblock %}
