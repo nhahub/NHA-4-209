@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "username": "admin",
+    "password": "admin123",
+    "role": "Admin",
+    "email": "admin@skyscope.aero",
+    "full_name": "System Administrator"
+  },
+  {
+    "id": 2,
+    "username": "user",
+    "password": "user123",
+    "role": "User",
+    "email": "ops@skyscope.aero",
+    "full_name": "Operations Analyst"
+  },
+  {
+    "id": 3,
+    "username": "Alaa",
+    "password": "Aa2012007",
+    "role": "Admin",
+    "email": "a035334214@gmail.com",
+    "full_name": "Alaa Ahmed"
+  }
+]

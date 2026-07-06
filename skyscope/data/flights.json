@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "flight_number": "TK1984",
+    "airline": "Turkish Airlines",
+    "origin": "IST",
+    "destination": "LHR",
+    "departure_time": "2026-07-05 08:15",
+    "arrival_time": "2026-07-05 10:45",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 2,
+    "flight_number": "LH456",
+    "airline": "Lufthansa",
+    "origin": "FRA",
+    "destination": "JFK",
+    "departure_time": "2026-07-05 09:30",
+    "arrival_time": "2026-07-05 12:15",
+    "delay": 45,
+    "status": "Delayed"
+  },
+  {
+    "id": 3,
+    "flight_number": "BA117",
+    "airline": "British Airways",
+    "origin": "LHR",
+    "destination": "DXB",
+    "departure_time": "2026-07-05 11:00",
+    "arrival_time": "2026-07-05 21:30",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 4,
+    "flight_number": "EK202",
+    "airline": "Emirates",
+    "origin": "DXB",
+    "destination": "SIN",
+    "departure_time": "2026-07-05 14:20",
+    "arrival_time": "2026-07-06 02:10",
+    "delay": 120,
+    "status": "Delayed"
+  },
+  {
+    "id": 5,
+    "flight_number": "AF447",
+    "airline": "Air France",
+    "origin": "CDG",
+    "destination": "JFK",
+    "departure_time": "2026-07-05 10:45",
+    "arrival_time": "2026-07-05 13:30",
+    "delay": 15,
+    "status": "Delayed"
+  },
+  {
+    "id": 6,
+    "flight_number": "QR701",
+    "airline": "Qatar Airways",
+    "origin": "DOH",
+    "destination": "SYD",
+    "departure_time": "2026-07-05 16:00",
+    "arrival_time": "2026-07-06 12:30",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 7,
+    "flight_number": "UA934",
+    "airline": "United Airlines",
+    "origin": "ORD",
+    "destination": "LAX",
+    "departure_time": "2026-07-05 07:00",
+    "arrival_time": "2026-07-05 09:45",
+    "delay": 30,
+    "status": "Delayed"
+  },
+  {
+    "id": 8,
+    "flight_number": "DL88",
+    "airline": "Delta Air Lines",
+    "origin": "ATL",
+    "destination": "LHR",
+    "departure_time": "2026-07-05 18:30",
+    "arrival_time": "2026-07-06 08:15",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 9,
+    "flight_number": "SQ321",
+    "airline": "Singapore Airlines",
+    "origin": "SIN",
+    "destination": "NRT",
+    "departure_time": "2026-07-05 22:15",
+    "arrival_time": "2026-07-06 06:30",
+    "delay": 60,
+    "status": "Delayed"
+  },
+  {
+    "id": 10,
+    "flight_number": "KL644",
+    "airline": "KLM",
+    "origin": "AMS",
+    "destination": "JFK",
+    "departure_time": "2026-07-05 13:10",
+    "arrival_time": "2026-07-05 15:55",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 11,
+    "flight_number": "TK31",
+    "airline": "Turkish Airlines",
+    "origin": "IST",
+    "destination": "JFK",
+    "departure_time": "2026-07-05 19:45",
+    "arrival_time": "2026-07-06 00:30",
+    "delay": 90,
+    "status": "Delayed"
+  },
+  {
+    "id": 12,
+    "flight_number": "AA100",
+    "airline": "American Airlines",
+    "origin": "JFK",
+    "destination": "LHR",
+    "departure_time": "2026-07-05 20:00",
+    "arrival_time": "2026-07-06 08:00",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 13,
+    "flight_number": "EY101",
+    "airline": "Etihad Airways",
+    "origin": "AUH",
+    "destination": "LHR",
+    "departure_time": "2026-07-05 02:30",
+    "arrival_time": "2026-07-05 07:15",
+    "delay": 25,
+    "status": "Delayed"
+  },
+  {
+    "id": 14,
+    "flight_number": "CX251",
+    "airline": "Cathay Pacific",
+    "origin": "HKG",
+    "destination": "LAX",
+    "departure_time": "2026-07-05 15:40",
+    "arrival_time": "2026-07-05 13:20",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 15,
+    "flight_number": "SW4421",
+    "airline": "Southwest Airlines",
+    "origin": "DAL",
+    "destination": "DEN",
+    "departure_time": "2026-07-05 06:15",
+    "arrival_time": "2026-07-05 07:30",
+    "delay": 10,
+    "status": "Delayed"
+  },
+  {
+    "id": 16,
+    "flight_number": "TK2401",
+    "airline": "Turkish Airlines",
+    "origin": "IST",
+    "destination": "CDG",
+    "departure_time": "2026-07-05 12:00",
+    "arrival_time": "2026-07-05 14:30",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 17,
+    "flight_number": "LH920",
+    "airline": "Lufthansa",
+    "origin": "MUC",
+    "destination": "FRA",
+    "departure_time": "2026-07-05 17:20",
+    "arrival_time": "2026-07-05 18:15",
+    "delay": 55,
+    "status": "Delayed"
+  },
+  {
+    "id": 18,
+    "flight_number": "BA286",
+    "airline": "British Airways",
+    "origin": "LHR",
+    "destination": "SFO",
+    "departure_time": "2026-07-05 16:45",
+    "arrival_time": "2026-07-05 19:30",
+    "delay": 0,
+    "status": "On Time"
+  },
+  {
+    "id": 19,
+    "flight_number": "EK215",
+    "airline": "Emirates",
+    "origin": "DXB",
+    "destination": "LHR",
+    "departure_time": "2026-07-05 03:15",
+    "arrival_time": "2026-07-05 07:45",
+    "delay": 75,
+    "status": "Delayed"
+  },
+  {
+    "id": 20,
+    "flight_number": "AF660",
+    "airline": "Air France",
+    "origin": "CDG",
+    "destination": "NRT",
+    "departure_time": "2026-07-05 11:30",
+    "arrival_time": "2026-07-06 07:00",
+    "delay": 0,
+    "status": "On Time"
+  }
+]
