@@ -1,0 +1,28 @@
+Airline_ID,Airline_Name,Operating_Airline,Marketing_Code,Operating_Code
+1,"Commutair Aka Champlain Enterprises, Inc.",C5,UA,C5
+2,"GoJet Airlines, LLC d/b/a United Express",G7,UA,G7
+3,Air Wisconsin Airlines Corp,ZW,UA,ZW
+4,Mesa Airlines Inc.,YV,UA,YV
+5,Southwest Airlines Co.,WN,WN,WN
+6,Mesa Airlines Inc.,YV,AA,YV
+7,Republic Airlines,YX,AA,YX
+8,Republic Airlines,YX,DL,YX
+9,Republic Airlines,YX,UA,YX
+10,Endeavor Air Inc.,9E,DL,9E
+11,American Airlines Inc.,AA,AA,AA
+12,Capital Cargo International,PT,AA,PT
+13,SkyWest Airlines Inc.,OO,AA,OO
+14,Alaska Airlines Inc.,AS,AS,AS
+15,JetBlue Airways,B6,B6,B6
+16,Delta Air Lines Inc.,DL,DL,DL
+17,Frontier Airlines Inc.,F9,F9,F9
+18,Allegiant Air,G4,G4,G4
+19,Hawaiian Airlines Inc.,HA,HA,HA
+20,Envoy Air,MQ,AA,MQ
+21,Spirit Air Lines,NK,NK,NK
+22,Comair Inc.,OH,AA,OH
+23,SkyWest Airlines Inc.,OO,AS,OO
+24,SkyWest Airlines Inc.,OO,UA,OO
+25,SkyWest Airlines Inc.,OO,DL,OO
+26,Horizon Air,QX,AS,QX
+27,United Air Lines Inc.,UA,UA,UA
